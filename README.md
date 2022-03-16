@@ -103,5 +103,10 @@ bin/kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic cities
 ```sh
  bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic cities
 ```
+* Run a debezium Kafka connector
+```sh
+export CLASSPATH=/test/kafka-3.0.0-src/connect/debezium-connector-postgres/*
+bin/connect-distributed.sh config/connect-distributed.properties
+```
 
 
